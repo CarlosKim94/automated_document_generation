@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+pydantic
+python-multipart
+PyMuPDF
+PyPDF2
+reportlab
+jinja2
+sqlalchemy
+alembic
+python-dotenv
+httpx
+pytest
+pytest-asyncio
+pydantic-settings
