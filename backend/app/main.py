@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api.routers import documents
+from app.api.routers.documents import router as document_router
 
-app = FastAPI(title="Automated Document Generation")
+app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
@@ -12,12 +12,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(documents.router, prefix="/documents", tags=["documents"])
+app.include_router(document_router, prefix="/documents", tags=["documents"])
 
 @app.get("/")
 def read_root():
     return {"message": "Welcome to the Qualiopi Document Generation API"}
-
-@app.get("/health")
-def health():
-    return {"status": "ok"}

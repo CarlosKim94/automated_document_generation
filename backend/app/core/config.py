@@ -1,12 +1,11 @@
-import os
 from pydantic import BaseSettings
 
 class Settings(BaseSettings):
     app_name: str = "Qualiopi FastAPI App"
-    admin_email: str = "admin@example.com"
-    secret_key: str = "supersecret"
-    database_url: str = "sqlite:///./sql_app.db"
-    debug: bool = True
+    admin_email: str
+    secret_key: str
+    database_url: str
+    debug: bool = False
 
     class Config:
         env_file = ".env"

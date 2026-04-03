@@ -1,1 +1,14 @@
-/* Styles moved to index.html to bypass local build issues */
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #1e40af; /* Deep Professional Blue */
+  --color-brand-secondary: #3b82f6; /* Bright Action Blue */
+  --color-accent: #10b981; /* Success Green */
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply antialiased text-slate-900 bg-slate-50; /* Light gray background, not pure white */
+  }
+}
